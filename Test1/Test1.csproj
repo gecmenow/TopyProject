@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99D0CFC0-CEE2-4C3D-9C4D-A7BF8A5320AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test1</RootNamespace>
+    <AssemblyName>Test1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SolidWorks.Interop.sldworks">
+      <HintPath>bin\Debug\Libraries\SolidWorks.Interop.sldworks.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.swcommands">
+      <HintPath>bin\Debug\Libraries\SolidWorks.Interop.swcommands.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.swconst">
+      <HintPath>bin\Debug\Libraries\SolidWorks.Interop.swconst.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additionally\AdditionallyOptions.cs" />
+    <Compile Include="ChangeWords\Change.cs" />
+    <Compile Include="Check\CheckFields.cs" />
+    <Compile Include="Check\CheckPoints.cs" />
+    <Compile Include="Extract_Data\ExtractRF.cs" />
+    <Compile Include="Extract_Data\ExtractVolume.cs" />
+    <Compile Include="Extract_Data\OLD\ExtractVolumeOLD.cs" />
+    <Compile Include="Extract_Data\ProcessData.cs" />
+    <Compile Include="ExtraPage\ExtraClass.cs" />
+    <Compile Include="Files\FileCreation.cs" />
+    <Compile Include="Files\FileName.cs" />
+    <Compile Include="Function\Checker.cs" />
+    <Compile Include="Function\FunctionParams.cs" />
+    <Compile Include="Function\MainFunction.cs" />
+    <Compile Include="Function\CheckNewCoordinate.cs" />
+    <Compile Include="makeReport\Charts.cs" />
+    <Compile Include="makeReport\DrawCharts\Angle.cs" />
+    <Compile Include="makeReport\DrawCharts\Friction.cs" />
+    <Compile Include="makeReport\DrawCharts\Radius.cs" />
+    <Compile Include="makeReport\GeneralReport.cs" />
+    <Compile Include="makeReport\ReactionForceReport.cs" />
+    <Compile Include="makeReport\CommonReport.cs" />
+    <Compile Include="makeReport\VolumeReport.cs" />
+    <Compile Include="Model\MaterialsOptions.cs" />
+    <Compile Include="OptimizationAlgorithm\NotUsingAnymore\GoldenRatioMethod.cs" />
+    <Compile Include="OptimizationAlgorithm\NotUsingAnymore\Perebor.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\AddRow.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\ExperimentPointsMatrix.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\ListOfComputedPoints.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\NewCoordinate.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\NewRow.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\RewriteArray.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\SimplexPlanning.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\PlanningArray.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\SimplexPlanningParams.cs" />
+    <Compile Include="OptimizationAlgorithm\SimplexPlanning\WorkingArray.cs" />
+    <Compile Include="Rout\ArgumentsCMD.cs" />
+    <Compile Include="Rout\RoutesForExtract.cs" />
+    <Compile Include="Extract_Data\RunExtract.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GeometryOptions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="runPrograms\CAD.cs" />
+    <Compile Include="runPrograms\CAE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rout\Routes.cs" />
+    <Compile Include="Volume\FilesForVolume.cs" />
+    <Compile Include="Volume\NodeDisplacement.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
